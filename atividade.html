@@ -1,34 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<html>
-
 <head>
+    <meta charset="UTF-8">
+    <title>Linguagem C do Gostosinho</title>
 
-	<meta charset="UTF-8">
-	<title> Linguagem C do Gostosinho: </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        pre {
+            background-color: #1e1e1e;
+            color: #00ff88;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
-<div style="text-align: center;">
 
-	<br><h1>O'que eu aprendi nessas aulas do Mr. Gostoso</h1></br>
-	
-	<br><p>1. Aprendi a criar uma função   </p></br>
-	<p> EXEMPLO: </p>
-	
-	<table>
-	<br> <p> int main { </br>
-	<br>return 0;<br>
-	<br>}</br>
-	</p>
-	</table>
-<div style="margin-left: 500px ; margin-right: 500px;">
- 	<p>Neste exemplo, criei uma função chamada "main", do tipo inteiro, "int", que é o tipo de dados que ela retornará ao usuário, abri colchetes "{" para "abrir" a função. 	"return 0;" no final para retornar um número inteiro, que no caso é o 0, depois fechei os colchetes. E pronto! Uma função que simplesmente retorna o valor zero criada!</p>
-</div>
-</div>
+<header>
+    <h1>O que eu aprendi nas aulas do Mr. Gostoso</h1>
+    <p>Introdução à Linguagem C</p>
+</header>
 
+<section>
+    <h2>1. Estrutura Básica de um Programa em C</h2>
+
+    <p>Aprendi que todo programa em C começa pela função principal chamada <strong>main</strong>. 
+    Ela é o ponto de entrada do programa.</p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    return 0;
+}
+    </pre>
+
+    <p><strong>Explicação:</strong></p>
+    <ul>
+        <li><strong>#include &lt;stdio.h&gt;</strong> → Biblioteca padrão para entrada e saída de dados.</li>
+        <li><strong>int</strong> → Tipo de dado da função (inteiro).</li>
+        <li><strong>main()</strong> → Função principal do programa.</li>
+        <li><strong>{ }</strong> → Delimitam o bloco da função.</li>
+        <li><strong>return 0;</strong> → Indica que o programa terminou corretamente.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>2. Tipos de Dados</h2>
+
+    <p>Aprendi que em C precisamos definir o tipo da variável antes de usá-la.</p>
+
+    <ul>
+        <li><strong>int</strong> → Números inteiros (ex: 10, -5)</li>
+        <li><strong>float</strong> → Números decimais (ex: 5.5)</li>
+        <li><strong>char</strong> → Um único caractere (ex: 'A')</li>
+        <li><strong>double</strong> → Números decimais com mais precisão</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. Variáveis</h2>
+
+    <p>Aprendi a declarar e utilizar variáveis:</p>
+
+    <pre>
+int idade = 18;
+float altura = 1.75;
+char letra = 'A';
+    </pre>
+
+    <p>Variáveis servem para armazenar informações na memória do computador.</p>
+</section>
+
+<section>
+    <h2>4. Entrada e Saída de Dados</h2>
+
+    <p>Também aprendi a usar <strong>printf</strong> para mostrar informações na tela e 
+    <strong>scanf</strong> para receber dados do usuário.</p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int idade;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Sua idade é %d", idade);
+
+    return 0;
+}
+    </pre>
+</section>
+
+<footer>
+    <p>Desenvolvido com muito aprendizado nas aulas do Mr. Gostoso </p>
+</footer>
 
 </body>
-
 </html>
