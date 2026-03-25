@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Pet Virtual</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            transition: background-image 1s ease-in-out;
+            background-image: url('bg.png'); /* Certifique-se que o nome é bg.png */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* O segredo do Ferlini (Ponto Extra) */
+        .ferlini-hidden {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            width: 30px;
+            opacity: 0; /* Invisível até passar o mouse */
+            cursor: pointer;
+        }
+        .ferlini-hidden:hover { opacity: 1; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-6">
+
+    <div class="w-full flex items-center gap-4 bg-white/30 p-4 rounded-2xl backdrop-blur-sm shadow-lg">
+        <div class="avatar">
+            <div class="w-16 rounded-full ring ring-secondary ring-offset-2">
+                <img id="avatarImg" src="lula.png" />
+            </div>
+        </div>
+        <input type="text" placeholder="Nome do pet..." class="input input-bordered input-secondary w-full max-w-xs" />
+    </div>
+
+    <div class="flex-grow flex items-center justify-center">
+        <img id="b" src="lula.png" alt="Criatura" class="w-full max-w-sm h-auto drop-shadow-2xl" />
+    </div>
+
+    <div class="mb-12">
+        <img id="btn" src="calanguinho.png" alt="Comida" 
+             class="w-32 cursor-pointer active:scale-90 transition transform hover:scale-110" 
+             onclick="alimentar()" />
+    </div>
+
+    <img src="ferlini.png" class="ferlini-hidden" onclick="alert('Ponto extra! Gostosinho detectado.')">
+
+    <script src="script.js"></script>
+</body>
+</html>
