@@ -40,5 +40,30 @@ function addProduto(){
     audio.play();
 
     atualizarTela();
+    
+    function addProduto(){
+    }
+
+    function atualizarTela(){
+
+        const lista = getElementById("lista");
+        lista.innerHTML = "";
+
+        let total = 0;
+
+        carrinho.forEach((item, index) => {
+            total+= item.subtotal;
+
+            const li = document.createElement("li");
+            li.className = "list-group-item";
+
+            li.innerHTML = '<div class="d-flex justify-content-between">
+                <strong>${item.nome}</strong>
+                <small> ${item.quantidade} x R$ ${item.preco} = <strong>${item.subtotal}
+                </strong></small>';
+        }
+            lista.appendChild(li);
+            });
+    }
 
 }
